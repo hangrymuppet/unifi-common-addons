@@ -10,7 +10,7 @@ For example, [configuring two IP addresses on your WAN interface, so that you ca
 
 ## Installation
 
-1. [on_boot.d](https://github.com/unifi-utilities/unifi-common)
+1. [on_boot.d](https://github.com/hangrymuppet/unifi-common)
 2. Copy `42-watch-for-changes.sh` to `/data/on_boot.d/`
    - Check the `FILE` variable; it should point to a file that exists.
 3. Copy `on-state-change.sh` to `/data/scripts/`

@@ -10,7 +10,7 @@ Firewall and routing rules remain functional, however.
 
 ## Requirements
 
-1. You have successfully set up the on_boot.d script described [here](https://github.com/unifi-utilities/unifi-common).
+1. You have successfully set up the on_boot.d script described [here](https://github.com/hangrymuppet/unifi-common).
 2. You must set up the ATT RG in ["IP Passthrough" mode](https://patrickdomingues.com/2022/09/03/udm-pro-vpn-on-att-fiber-bgw320/).
 3. You must turn off IPv6 on the ATT WAN connection, AND on each network/VLAN (IPv6 Interface Type: None).
 4. You must add firewall rules equivalent to (this can be done in the UI, select `Internet v6 Local` chain):
@@ -42,7 +42,7 @@ For dnsmasq, it writes `att-ipv6.conf` to `/run/dnsmasq.dhcp.conf.d/` on newer U
 
 ```sh
 cd /data/on_boot.d
-curl -LO https://raw.githubusercontent.com/unifi-utilities/unifi-common-addons/HEAD/att-ipv6/10-att-ipv6.sh
+curl -LO https://raw.githubusercontent.com/hangrymuppet/unifi-common-addons/refs/heads/main/att-ipv6/10-att-ipv6.sh
 chmod +x 10-att-ipv6.sh
 ./10-att-ipv6.sh
 ```

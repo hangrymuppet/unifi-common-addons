@@ -2,7 +2,7 @@
 
 ## Create the filesystem overlay
 
-If you're going to create several nspawn containers, you can save some disk space by using overlayfs to use a common base. Follow the instructions in the unifi-common-addons [documentation](https://github.com/unifi-utilities/unifi-common-addons/blob/main/nspawn-container/README.md) for UniFi OS containers. I called my container `debian-base`.
+If you're going to create several nspawn containers, you can save some disk space by using overlayfs to use a common base. Follow the instructions in the unifi-common-addons [documentation](https://raw.githubusercontent.com/hangrymuppet/unifi-common-addons/refs/heads/main/nspawn-container/README.md) for UniFi OS containers. I called my container `debian-base`.
 
 Next, we need an `upperdir` to save file changes and a `workdir` to save temporary file changes. I'm going to create a container for multicast-relay to replace the [podman container](https://github.com/scyto/multicast-relay) I used before 3.x. An important note: upperdir and workdir must not be on the overlayfs used by UniFi OS. I opted to store this data on the hard drive that I use for video storage at `/volume1`.
 

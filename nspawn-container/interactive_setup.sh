@@ -167,7 +167,7 @@ cd /data/on_boot.d
 if [ -f "$file" ] ; then
     rm "$file"
 fi
-curl -LO https://raw.githubusercontent.com/unifi-utilities/unifios-common-addons/main/nspawn-container/scripts/10-setup-network.sh
+curl -LO https://raw.githubusercontent.com/hangrymuppet/unifi-common-addons/refs/heads/main/nspawn-container/scripts/10-setup-network.sh
 chmod +x 10-setup-network.sh
 
 cat <<EOF > /etc/systemd/nspawn/"$container_name".nspawn
@@ -224,7 +224,7 @@ function setup_persistence() {
 #### Configure Persistence Across Firmware Updates
 echo "Configuring Persistence Across Firmware Updates"
 cd /data/on_boot.d
-curl -LO https://raw.githubusercontent.com/unifi-utilities/unifios-common-addons/main/nspawn-container/scripts/0-setup-system.sh
+curl -LO https://raw.githubusercontent.com/hangrymuppet/unifi-common-addons/refs/heads/main/nspawn-container/scripts/0-setup-system.sh
 chmod +x 0-setup-system.sh
 
 mv 0-setup-system.sh 02-setup-system.sh
